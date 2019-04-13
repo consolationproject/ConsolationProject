@@ -1,6 +1,6 @@
-package dao.impl;
+package com.dao.impl;
 
-import dao.MoodRecordDAO;
+import com.dao.MoodRecordDAO;
 
 public class MoodRecordDAOImpl implements MoodRecordDAO {
 

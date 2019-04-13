@@ -1,4 +1,4 @@
-package dao;
+package com.dao;
 
 public abstract class DAOFactory {
     private static DAOFactory df = new DAOFactory1();

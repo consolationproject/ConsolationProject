@@ -1,6 +1,6 @@
-package dao;
+package com.dao;
 
-import pojo.User;
+import com.pojo.User;
 
 public interface UserDAO {
     public Integer addUser(User user);

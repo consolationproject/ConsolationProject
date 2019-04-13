@@ -1,6 +1,6 @@
-package dao.impl;
+package com.dao.impl;
 
-import dao.SongDAO;
+import com.dao.SongDAO;
 
 public class SongDAOImpl implements SongDAO {
 

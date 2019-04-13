@@ -1,8 +1,8 @@
-package dao.impl;
+package com.dao.impl;
 
-import dao.UserDAO;
+import com.dao.UserDAO;
 import dao.util.DBUtil;
-import pojo.User;
+import com.pojo.User;
 
 import java.sql.Connection;
 import java.sql.SQLException;

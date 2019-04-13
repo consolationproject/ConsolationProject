@@ -1,4 +1,4 @@
-package pojo;
+package com.pojo;
 
 public class Song {
     private Integer sid;

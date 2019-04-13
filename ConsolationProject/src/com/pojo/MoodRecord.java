@@ -1,4 +1,4 @@
-package pojo;
+package com.pojo;
 
 public class MoodRecord {
     private Integer index;

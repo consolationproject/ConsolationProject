@@ -1,8 +1,8 @@
-package dao;
+package com.dao;
 
-import dao.impl.MoodRecordDAOImpl;
-import dao.impl.SongDAOImpl;
-import dao.impl.UserDAOImpl;
+import com.dao.impl.MoodRecordDAOImpl;
+import com.dao.impl.SongDAOImpl;
+import com.dao.impl.UserDAOImpl;
 
 public class DAOFactory1 extends DAOFactory {
 

@@ -1,16 +1,15 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: lzc98
-  Date: 2019/4/12
-  Time: 22:11
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <title>主页</title>
+</head>
+<body>
+<div>
+    <form class="addUser" action="useraction" method="post">
+        <input type="text" name="wxid"/>
+        <input type="text" name="wxname"/>
+        <input type="submit" id="button" value="添加"/>
+    </form>
+</div>
+</body>
 </html>
