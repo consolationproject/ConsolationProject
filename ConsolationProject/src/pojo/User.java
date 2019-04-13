@@ -3,7 +3,7 @@ package pojo;
 public class User {
 
     private String wxid;
-    private String wxname;
+    private String wxName;
 
     public String getWxid() {
         return wxid;
@@ -13,11 +13,11 @@ public class User {
         this.wxid = wxid;
     }
 
-    public String getWxname() {
-        return wxname;
+    public String getWxName() {
+        return wxName;
     }
 
-    public void setWxname(String wxname) {
-        this.wxname = wxname;
+    public void setWxName(String wxName) {
+        this.wxName = wxName;
     }
 }
