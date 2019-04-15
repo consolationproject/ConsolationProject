@@ -24,9 +24,8 @@ DROP TABLE IF EXISTS `moodrecord`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `moodrecord` (
   `index` int(11) NOT NULL AUTO_INCREMENT,
-  `mr_id` int(11) NOT NULL,
   `wxid` varchar(25) NOT NULL,
-  `mr_grade` float NOT NULL,
+  `mr_grade` int(11) NOT NULL,
   `mr_date` varchar(45) NOT NULL,
   PRIMARY KEY (`index`),
   KEY `FK_1_idx` (`wxid`),
@@ -76,7 +75,7 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
   `wxid` varchar(25) NOT NULL,
-  `wxname` varchar(45) NOT NULL,
+  `nickname` varchar(45) NOT NULL,
   PRIMARY KEY (`wxid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -87,6 +86,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES ('L..z、℃','L..z、℃');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -107,4 +107,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-12 22:57:00
+-- Dump completed on 2019-04-15 12:40:09
