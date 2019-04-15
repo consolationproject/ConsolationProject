@@ -34,7 +34,9 @@ public class moodrecordaction extends HttpServlet {
         SongDAO songDAO = DAOFactory.instance().getSongDAO();
 
         switch (op) {
-            case 1: //获取心情
+            case 1:
+                //获取当日心情
+
                 String wxid = request.getParameter("nickname");
                 String moodgrade = request.getParameter("moodgrade");
                 Integer mgrade = -1;
@@ -64,7 +66,14 @@ public class moodrecordaction extends HttpServlet {
                 out.flush();
                 break;
             case 2:
+                //获取当前用户的所有心情
 
+                String wxId = request.getParameter("wxid");
+                List<MoodRecord> moodList = moodRecordDAO.getUserMoodList(wxId);
+                gson = new Gson();
+                String moodJson = gson.toJson(moodList);
+                out.write(moodJson);
+                out.flush();
                 break;
         }
         out.flush();

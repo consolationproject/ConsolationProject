@@ -2,7 +2,7 @@ package com.dao.impl;
 
 import com.dao.SongDAO;
 import com.pojo.Song;
-import dao.util.DBUtil ;
+import dao.util.DBUtil;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -24,7 +24,7 @@ public class SongDAOImpl implements SongDAO {
         try {
             st = conn.createStatement();
             rs = st.executeQuery(sql);
-            while(rs.next()){
+            while (rs.next()) {
                 Song song = new Song();
                 song.setSid(rs.getInt(1));
                 song.setSname(rs.getString(2));
@@ -35,8 +35,8 @@ public class SongDAOImpl implements SongDAO {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally{
-            DBUtil.close(rs,st, conn);
+        } finally {
+            DBUtil.close(rs, st, conn);
         }
         return list;
     }

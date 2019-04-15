@@ -7,7 +7,9 @@ import dao.util.DBUtil;
 import java.sql.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class MoodRecordDAOImpl implements MoodRecordDAO {
 
@@ -77,5 +79,33 @@ public class MoodRecordDAOImpl implements MoodRecordDAO {
             DBUtil.close(rs, st, conn);
         }
         return mood;
+    }
+
+    @Override
+    public List<MoodRecord> getUserMoodList(String wxId) {
+        List<MoodRecord> list = new ArrayList<>();
+        Connection conn = DBUtil.getConnection();
+        String sql = "SELECT * FROM moodrecord WHERE wxid = " + wxId;
+
+        Statement st = null;
+        ResultSet rs = null;
+        try {
+            st = conn.createStatement();
+            rs = st.executeQuery(sql);
+            while (rs.next()) {
+                MoodRecord moodRecord = new MoodRecord();
+                moodRecord.setId(rs.getInt(1));
+                moodRecord.setWxid(rs.getString(2));
+                moodRecord.setMrgrade(rs.getInt(3));
+                moodRecord.setMrdate(rs.getString(4));
+
+                list.add(moodRecord);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBUtil.close(rs, st, conn);
+        }
+        return list;
     }
 }
