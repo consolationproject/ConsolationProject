@@ -2,9 +2,8 @@ package com.pojo;
 
 public class MoodRecord {
     private Integer index;
-    private Integer mrid;
     private String wxid;
-    private String mrgrade;
+    private Integer mrgrade;
     private String mrdate;
 
     public Integer getIndex() {
@@ -15,14 +14,6 @@ public class MoodRecord {
         this.index = index;
     }
 
-    public Integer getMrid() {
-        return mrid;
-    }
-
-    public void setMrid(Integer mrid) {
-        this.mrid = mrid;
-    }
-
     public String getWxid() {
         return wxid;
     }
@@ -31,11 +22,11 @@ public class MoodRecord {
         this.wxid = wxid;
     }
 
-    public String getMrgrade() {
+    public Integer getMrgrade() {
         return mrgrade;
     }
 
-    public void setMrgrade(String mrgrade) {
+    public void setMrgrade(Integer mrgrade) {
         this.mrgrade = mrgrade;
     }
 

@@ -949,81 +949,75 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="238" name="mr_id">
+    <column id="242" parent="238" name="wxid">
       <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="243" parent="238" name="wxid">
-      <Position>3</Position>
       <DataType>varchar(25)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="238" name="mr_grade">
-      <Position>4</Position>
-      <DataType>float|0s</DataType>
+    <column id="243" parent="238" name="mr_grade">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="238" name="mr_date">
-      <Position>5</Position>
+    <column id="244" parent="238" name="mr_date">
+      <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="246" parent="238" name="FK_1_idx">
+    <index id="245" parent="238" name="FK_1_idx">
       <ColNames>wxid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="247" parent="238" name="PRIMARY">
+    <key id="246" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>index</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="248" parent="238" name="FK_1">
+    <foreign-key id="247" parent="238" name="FK_1">
       <ColNames>wxid</ColNames>
       <RefSchemaName>consolationproject</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>wxid</RefColNames>
     </foreign-key>
-    <column id="249" parent="239" name="s_id">
+    <column id="248" parent="239" name="s_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="239" name="s_link">
+    <column id="249" parent="239" name="s_link">
       <Position>2</Position>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="239" name="s_grade">
+    <column id="250" parent="239" name="s_grade">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="252" parent="239" name="PRIMARY">
+    <key id="251" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>s_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="253" parent="240" name="wxid">
+    <column id="252" parent="240" name="wxid">
       <Position>1</Position>
       <DataType>varchar(25)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="240" name="wxname">
+    <column id="253" parent="240" name="nickname">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="255" parent="240" name="PRIMARY">
+    <key id="254" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>wxid</ColNames>
       <Primary>1</Primary>

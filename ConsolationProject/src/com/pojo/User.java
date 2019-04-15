@@ -2,22 +2,22 @@ package com.pojo;
 
 public class User {
 
-    private String wxid;
-    private String wxName;
+    private String wxId;
+    private String nickName;
 
-    public String getWxid() {
-        return wxid;
+    public String getWxId() {
+        return wxId;
     }
 
-    public void setWxid(String wxid) {
-        this.wxid = wxid;
+    public void setWxId(String wxId) {
+        this.wxId = wxId;
     }
 
-    public String getWxName() {
-        return wxName;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setWxName(String wxName) {
-        this.wxName = wxName;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 }
