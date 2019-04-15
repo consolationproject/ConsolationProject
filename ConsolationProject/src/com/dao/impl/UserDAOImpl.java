@@ -11,7 +11,7 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public Integer addUser(User user) {
         Connection conn = DBUtil.getConnection();
-        String sql = "insert into users values('" + user.getWxId() + "', '" + user.getNickName() + "')";
+        String sql = "INSERT INTO users VALUES ('" + user.getWxId() + "', '" + user.getNickName() + "')";
         Statement st = null;
         try {
             st = conn.createStatement();
@@ -27,7 +27,7 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public Boolean deleteUser(String wxId) {
         Connection conn = DBUtil.getConnection();
-        String sql = "delete from users where wxid ='" + wxId + "'";
+        String sql = "DELETE FROM users WHERE wxid ='" + wxId + "'";
 
         Statement st = null;
         try {
@@ -36,7 +36,7 @@ public class UserDAOImpl implements UserDAO {
             return true;
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally{
+        } finally {
             DBUtil.close(null, st, conn);
         }
         return false;
@@ -45,7 +45,7 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public Boolean isExited(String wxId) {
         Connection conn = DBUtil.getConnection();
-        String seek = "select COUNT(*) from users where wxid ='" + wxId + "'";
+        String seek = "SELECT COUNT(*) FROM users WHERE wxid ='" + wxId + "'";
 
         PreparedStatement pstat = null;
         ResultSet rs;
@@ -53,13 +53,13 @@ public class UserDAOImpl implements UserDAO {
             pstat = conn.prepareStatement(seek);
             rs = pstat.executeQuery();// 发送查询
             if (rs.next()) {
-                if(rs.getInt(1) == 1) {
+                if (rs.getInt(1) == 1) {
                     return true;
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally{
+        } finally {
             DBUtil.close(null, pstat, conn);
         }
         return false;

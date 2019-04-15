@@ -1,17 +1,17 @@
 package com.pojo;
 
 public class MoodRecord {
-    private Integer index;
+    private Integer id;
     private String wxid;
     private Integer mrgrade;
     private String mrdate;
 
-    public Integer getIndex() {
-        return index;
+    public Integer getId() {
+        return id;
     }
 
-    public void setIndex(Integer index) {
-        this.index = index;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getWxid() {

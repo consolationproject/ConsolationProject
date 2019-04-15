@@ -942,7 +942,7 @@
     <table id="238" parent="3" name="moodrecord"/>
     <table id="239" parent="3" name="songs"/>
     <table id="240" parent="3" name="users"/>
-    <column id="241" parent="238" name="index">
+    <column id="241" parent="238" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
@@ -973,7 +973,7 @@
     </index>
     <key id="246" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>index</ColNames>
+      <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
     <foreign-key id="247" parent="238" name="FK_1">
@@ -988,36 +988,46 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="239" name="s_link">
+    <column id="249" parent="239" name="s_name">
       <Position>2</Position>
-      <DataType>varchar(200)|0s</DataType>
+      <DataType>varchar(45)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="250" parent="239" name="s_cover">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="251" parent="239" name="s_link">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="239" name="s_grade">
-      <Position>3</Position>
+    <column id="252" parent="239" name="s_grade">
+      <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="251" parent="239" name="PRIMARY">
+    <key id="253" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>s_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="252" parent="240" name="wxid">
+    <column id="254" parent="240" name="wxid">
       <Position>1</Position>
       <DataType>varchar(25)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="240" name="nickname">
+    <column id="255" parent="240" name="nickname">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="254" parent="240" name="PRIMARY">
+    <key id="256" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>wxid</ColNames>
       <Primary>1</Primary>
