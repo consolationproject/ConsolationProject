@@ -85,8 +85,8 @@ public class MoodRecordDAOImpl implements MoodRecordDAO {
     public List<MoodRecord> getUserMoodList(String wxId) {
         List<MoodRecord> list = new ArrayList<>();
         Connection conn = DBUtil.getConnection();
-        String sql = "SELECT * FROM moodrecord WHERE wxid = " + wxId;
-
+        String sql = "SELECT * FROM moodrecord WHERE wxid = '" + wxId+"' order by mr_grade asc limit 7";
+        System.out.println(sql);
         Statement st = null;
         ResultSet rs = null;
         try {

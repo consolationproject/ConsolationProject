@@ -12,6 +12,6 @@ public interface MoodRecordDAO {
 
     public Integer queryUserTodayMood(String wxId); //查询用户当日存在数据库里的心情
 
-    public List<MoodRecord> getUserMoodList(String wxId);   //查询当前用户下的所有心情记录
+    public List<MoodRecord> getUserMoodList(String wxId);   //查询当前用户下最近7天的心情记录
 
 }

@@ -70,6 +70,7 @@ public class moodrecordaction extends HttpServlet {
 
                 String wxId = request.getParameter("wxid");
                 List<MoodRecord> moodList = moodRecordDAO.getUserMoodList(wxId);
+                System.out.println(moodList.get(1));
                 gson = new Gson();
                 String moodJson = gson.toJson(moodList);
                 out.write(moodJson);
